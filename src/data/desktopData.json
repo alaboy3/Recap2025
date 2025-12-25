@@ -1,0 +1,339 @@
+{
+  "folders": [
+    {
+      "id": "year_2025",
+      "name": "year_2025",
+      "position": {
+        "x": 0,
+        "y": 180
+      },
+      "items": []
+    }
+  ],
+  "images": [
+    {
+      "id": "badbo_desktop",
+      "name": "BadBo.jpg",
+      "src": "/images/Concerts/BadBo.JPEG",
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "size": "small",
+      "imageStack": [
+        "/images/Concerts/4deJulio.jpg",
+        "/images/Concerts/BadBo.JPEG",
+        "/images/Concerts/Chuwi.JPEG",
+        "/images/Concerts/PJ.JPEG",
+        "/images/Concerts/PR.JPEG",
+        "/images/Concerts/Parada.MOV",
+        "/images/Concerts/allThingsGo.jpg",
+        "/images/Concerts/amanda.jpg",
+        "/images/Concerts/casita.JPEG",
+        "/images/Concerts/chappell.mov",
+        "/images/Concerts/inpersonator.JPEG",
+        "/images/Concerts/laSangreRoja.JPEG",
+        "/images/Concerts/losdeBoston.JPEG",
+        "/images/Concerts/marcello.jpg",
+        "/images/Concerts/miGurl.JPEG",
+        "/images/Concerts/mora.MOV",
+        "/images/Concerts/spotlight.JPEG",
+        "/images/Concerts/tren.JPEG",
+        "/images/Concerts/tribeca.jpg",
+        "/images/Concerts/volunteer.MOV"
+      ]
+    },
+    {
+      "id": "nyc_desktop",
+      "name": "nyc.jpg",
+      "src": "/images/nyc.jpg",
+      "position": {
+        "x": 900,
+        "y": 150
+      },
+      "size": "xlarge"
+    },
+    {
+      "id": "apartamento_desktop",
+      "name": "apartamentoNuevo.jpg",
+      "src": "/images/apartamentoNuevo.jpg",
+      "position": {
+        "x": 100,
+        "y": 400
+      },
+      "size": "medium",
+      "imageStack": [
+        "/images/apartamentoNuevo.jpg"
+      ]
+    },
+    {
+      "id": "fam_desktop",
+      "name": "fam.jpg",
+      "src": "/images/Niagaras/fam.jpg",
+      "position": {
+        "x": 300,
+        "y": 400
+      },
+      "size": "large",
+      "imageStack": [
+        "/images/Niagaras/1 -niagaras.jpg",
+        "/images/Niagaras/fam.jpg",
+        "/images/Niagaras/2 - el Fall.jpg",
+        "/images/Niagaras/3 - niagaras.MOV",
+        "/images/Niagaras/4 - elvinodeCanada.jpg",
+        "/images/Niagaras/5 - wowNiagaras.MOV",
+        "/images/Niagaras/6 - upstate.jpg",
+        "/images/Niagaras/7 - Cooperstown.jpg",
+        "/images/Niagaras/8 - baseball.MOV",
+        "/images/Niagaras/9 - kodak.jpg",
+        "/images/Niagaras/coney 1.jpg",
+        "/images/Niagaras/mets.jpg",
+        "/images/Niagaras/mets2.MOV"
+      ]
+    },
+    {
+      "id": "fashion_desktop",
+      "name": "detox.jpg",
+      "src": "/images/detox.jpg",
+      "position": {
+        "x": 400,
+        "y": 750
+      },
+      "size": "small"
+    },
+    {
+      "id": "yosemite_desktop",
+      "name": "YOSEMITE.jpg",
+      "src": "/images/Yosemite/yosemite.jpg",
+      "position": {
+        "x": 1000,
+        "y": 700
+      },
+      "size": "large",
+      "imageStack": [
+        "/images/Yosemite/1 - people.jpg",
+        "/images/Yosemite/yosemite.jpg",
+        "/images/Yosemite/2 - yosemite 2.MOV",
+        "/images/Yosemite/3 - hunger games.MOV",
+        "/images/Yosemite/4 - yosemite.jpg",
+        "/images/Yosemite/5 - coucple.jpg",
+        "/images/Yosemite/6 - caminando.MOV",
+        "/images/Yosemite/7 - agua.jpg",
+        "/images/Yosemite/8 - cansada.jpg",
+        "/images/Yosemite/9 - curves.mov",
+        "/images/Yosemite/baseball.jpg",
+        "/images/Yosemite/hippie 2.JPG",
+        "/images/Yosemite/hippie.jpg",
+        "/images/Yosemite/SF.jpg",
+        "/images/Yosemite/walt.jpg"
+      ]
+    },
+    {
+      "id": "h_desktop",
+      "name": "H.PNG",
+      "src": "/images/H.PNG",
+      "position": {
+        "x": 300,
+        "y": 200
+      },
+      "size": "small"
+    },
+    {
+      "id": "matcha_desktop",
+      "name": "matcha.jpg",
+      "src": "/images/matcha.jpg",
+      "position": {
+        "x": 500,
+        "y": 200
+      },
+      "size": "medium"
+    },
+    {
+      "id": "plantas_desktop",
+      "name": "Plantas.jpg",
+      "src": "/images/Plantas.jpg",
+      "position": {
+        "x": 800,
+        "y": 200
+      },
+      "size": "large"
+    },
+    {
+      "id": "nailsog_desktop",
+      "name": "nailsOG.jpg",
+      "src": "/images/nailsOG.jpg",
+      "position": {
+        "x": 1200,
+        "y": 150
+      },
+      "size": "small"
+    },
+    {
+      "id": "cowboy_desktop",
+      "name": "cowboy.jpg",
+      "src": "/images/cowboy.jpg",
+      "position": {
+        "x": 200,
+        "y": 500
+      },
+      "size": "medium"
+    },
+    {
+      "id": "work_desktop",
+      "name": "work.jpeg",
+      "src": "/images/work.jpeg",
+      "position": {
+        "x": 600,
+        "y": 500
+      },
+      "size": "xlarge"
+    },
+    {
+      "id": "candles_desktop",
+      "name": "CANDLES.jpg",
+      "src": "/images/CANDLES.jpg",
+      "position": {
+        "x": 1100,
+        "y": 500
+      },
+      "size": "medium"
+    },
+    {
+      "id": "alton_davy_desktop",
+      "name": "alton and davy.jpg",
+      "src": "/images/alton and davy.jpg",
+      "position": {
+        "x": 200,
+        "y": 800
+      },
+      "size": "large"
+    },
+    {
+      "id": "art_desktop",
+      "name": "art.jpg",
+      "src": "/images/art.jpg",
+      "position": {
+        "x": 700,
+        "y": 800
+      },
+      "size": "small"
+    }
+  ],
+  "folderContents": {
+    "year_2025": {
+      "folders": [
+        {
+          "id": "brooklyn",
+          "name": "brooklyn",
+          "position": {
+            "x": 150,
+            "y": 180
+          },
+          "items": [
+            "nyc.jpg",
+            "Apa/apartment 1.jpg",
+            "Fashion/fashionInspo.PNG"
+          ]
+        },
+        {
+          "id": "apa",
+          "name": "apa",
+          "position": {
+            "x": 240,
+            "y": 180
+          },
+          "items": [
+            "/images/Apa/1.jpg",
+            "/images/Apa/2.jpg",
+            "/images/Apa/3.jpg",
+            "/images/Apa/4.jpg",
+            "/images/Apa/5.jpg",
+            "/images/Apa/6.1.jpg",
+            "/images/Apa/6.2.jpg",
+            "/images/Apa/7.jpg",
+            "/images/Apa/8.jpg",
+            "/images/Apa/9.jpg",
+            "/images/Apa/9.1.MOV",
+            "/images/Apa/9.2.jpg",
+            "/images/Apa/10.jpg",
+            "/images/Apa/10.MOV",
+            "/images/Apa/11 - broke.jpg",
+            "/images/Apa/12 - washing.jpg",
+            "/images/Apa/13.jpg",
+            "/images/Apa/14.jpg",
+            "/images/Apa/15.jpg",
+            "/images/Apa/16.jpg",
+            "/images/Apa/17.jpg",
+            "/images/Apa/18.jpg",
+            "/images/Apa/19.jpeg",
+            "/images/Apa/20.jpeg",
+            "/images/Apa/20.3.jpg",
+            "/images/Apa/21.jpg",
+            "/images/Apa/plantBed.jpg",
+            "/images/Apa/plantbed2.jpeg",
+            "/images/Apa/plantsBig.jpg",
+            "/images/Apa/progress 6.jpg",
+            "/images/Apa/progress 11.jpg",
+            "/images/Apa/progress 20.JPG"
+          ]
+        },
+        {
+          "id": "outfits",
+          "name": "outfits",
+          "position": {
+            "x": 1140,
+            "y": 110
+          },
+          "items": [
+            "Fashion/mainOutfit.JPG",
+            "Fashion/outfit1.JPG",
+            "Fashion/outfit2.jpg",
+            "Fashion/outfit3.jpg"
+          ]
+        }
+      ],
+      "images": [],
+      "notes": [
+        {
+          "id": "best_restaurants",
+          "name": "Best Restaurants",
+          "position": {
+            "x": 1140,
+            "y": 210
+          }
+        }
+      ],
+      "music": [
+        {
+          "id": "music_app",
+          "name": "Music",
+          "position": {
+            "x": 1140,
+            "y": 310
+          }
+        }
+      ],
+      "calendar": [
+        {
+          "id": "calendar_app",
+          "name": "Calendar",
+          "position": {
+            "x": 450,
+            "y": 180
+          },
+          "backgroundImage": "/images/wallpaper2025.jpg"
+        }
+      ],
+      "movies": [
+        {
+          "id": "movies_app",
+          "name": "Movies",
+          "position": {
+            "x": 600,
+            "y": 180
+          }
+        }
+      ]
+    }
+  }
+}

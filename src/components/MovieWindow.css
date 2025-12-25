@@ -1,0 +1,88 @@
+.movie-window {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.movie-section {
+  margin-bottom: 60px;
+}
+
+.movie-section:last-child {
+  margin-bottom: 0;
+}
+
+.movie-section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.02em;
+}
+
+.movie-posters-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.movie-posters-grid-nowrap {
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  padding-bottom: 10px;
+}
+
+.movie-poster-container {
+  width: 180px;
+  height: 270px;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+  background: #000;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.movie-poster-container:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.movie-poster-ribbon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: 
+    0 2px 8px rgba(139, 92, 246, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  letter-spacing: 0.5px;
+  min-width: 36px;
+  text-align: center;
+  line-height: 1.2;
+}
+

@@ -1,0 +1,219 @@
+.notes-window-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #1d1d1f;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.notes-top-bar {
+  height: 50px;
+  background: #1d1d1f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.notes-top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.notes-folder-icon {
+  font-size: 16px;
+}
+
+.notes-location {
+  font-weight: 500;
+}
+
+.notes-count {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.notes-top-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.notes-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.notes-top-right {
+  display: flex;
+  align-items: center;
+}
+
+.notes-search {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+/* Main Container */
+.notes-main-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.notes-sidebar {
+  width: 280px;
+  background: #252528;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.notes-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notes-sidebar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.notes-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.notes-list-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.notes-list-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.notes-list-item-selected {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notes-list-item-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.notes-list-item-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Content Area */
+.notes-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #1d1d1f;
+}
+
+.notes-content-header {
+  padding: 24px 32px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.notes-content-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.notes-content-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+.notes-restaurants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+}
+
+.notes-restaurant-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notes-restaurant-name {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.notes-restaurant-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.notes-restaurant-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #2d2d2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notes-restaurant-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Scrollbar styling for dark theme */
+.notes-list::-webkit-scrollbar,
+.notes-content-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notes-list::-webkit-scrollbar-track,
+.notes-content-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.notes-list::-webkit-scrollbar-thumb,
+.notes-content-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.notes-list::-webkit-scrollbar-thumb:hover,
+.notes-content-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+

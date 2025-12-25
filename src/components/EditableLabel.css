@@ -1,0 +1,37 @@
+.editable-label {
+  display: inline-block;
+}
+
+.editable-label-input {
+  background: rgba(255, 255, 255, 0.98);
+  border: 2px solid #007AFF;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: inherit;
+  font-family: inherit;
+  color: #1d1d1f;
+  outline: none;
+  min-width: 60px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 
+    0 4px 12px rgba(0, 122, 255, 0.25),
+    0 0 0 4px rgba(0, 122, 255, 0.1);
+  letter-spacing: -0.01em;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.editable-label-input:focus {
+  box-shadow: 
+    0 6px 16px rgba(0, 122, 255, 0.3),
+    0 0 0 4px rgba(0, 122, 255, 0.15);
+  border-color: #0051D5;
+}
+
+.folder-label-editable,
+.image-label-editable {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+

@@ -1,0 +1,222 @@
+.photobooth-window {
+  position: absolute;
+  width: 500px;
+  max-width: calc(100vw - 40px);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    0 0 0 0.5px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+  max-height: calc(100vh - 100px);
+  backdrop-filter: blur(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.photobooth-closing {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.photobooth-title-bar {
+  height: 40px;
+  background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 50%, #f0f0f0 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.photobooth-controls {
+  display: flex;
+  gap: 8px;
+  margin-right: 12px;
+}
+
+.photobooth-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.photobooth-control:hover {
+  filter: brightness(0.85);
+  transform: scale(1.1);
+}
+
+.photobooth-control:active {
+  transform: scale(0.95);
+}
+
+.photobooth-control-close {
+  background: #ff5f57;
+}
+
+.photobooth-control-minimize {
+  background: #ffbd2e;
+}
+
+.photobooth-control-maximize {
+  background: #28ca42;
+}
+
+.photobooth-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #1d1d1f;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  pointer-events: none;
+}
+
+.photobooth-content {
+  flex: 1;
+  background: #000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 300px;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.photobooth-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateY(40px);
+}
+
+.photobooth-bottom-bar {
+  height: 60px;
+  background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 50%, #f0f0f0 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.photobooth-left-controls {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.photobooth-icon-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.photobooth-icon-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.photobooth-capture-button {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.1s;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.photobooth-capture-button:hover {
+  transform: scale(1.1);
+}
+
+.photobooth-capture-button:active {
+  transform: scale(0.95);
+}
+
+.photobooth-effects-button {
+  position: absolute;
+  right: 20px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.photobooth-effects-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.photobooth-snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.photobooth-snowflake {
+  position: absolute;
+  top: -20px;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  animation: photobooth-snowfall linear infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes photobooth-snowfall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+

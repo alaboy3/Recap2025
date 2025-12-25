@@ -1,0 +1,55 @@
+.calendar-icon-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: transform 0.1s ease-out;
+}
+
+.calendar-icon-container:hover {
+  transform: scale(1.05);
+}
+
+.calendar-icon-container:active {
+  transform: scale(0.98);
+}
+
+.calendar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  transition: filter 0.2s;
+}
+
+.calendar-icon-container:hover .calendar-icon {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.calendar-icon-label {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 80px;
+  word-wrap: break-word;
+  line-height: 1.2;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.calendar-label-editable {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #007AFF;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 12px;
+  min-width: 60px;
+}
+

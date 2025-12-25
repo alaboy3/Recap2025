@@ -1,0 +1,88 @@
+.message-bubble {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 5;
+  max-width: calc(100vw - 20px);
+}
+
+.message-bubble-blue {
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.message-bubble-gray {
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-bubble-content {
+  padding: 11px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: -0.01em;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.message-bubble-blue .message-bubble-content {
+  background: linear-gradient(180deg, #5BA3FF 0%, #4A9EFF 100%);
+  color: white;
+  border-bottom-right-radius: 6px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message-bubble-gray .message-bubble-content {
+  background: linear-gradient(180deg, #525252 0%, #4A4A4A 100%);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.message-bubble-tail {
+  flex-shrink: 0;
+}
+
+/* Blue bubbles - curved corner tail pointing right */
+.message-bubble-blue .message-bubble-tail {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #5BA3FF 0%, #4A9EFF 100%);
+  border-bottom-right-radius: 14px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  position: relative;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.message-bubble-blue .message-bubble-tail::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-bottom-right-radius: 10px;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3;
+}
+
+/* Gray bubbles - tail pointing down */
+.message-bubble-gray .message-bubble-tail {
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 11px solid #4A4A4A;
+  margin-top: -1px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
