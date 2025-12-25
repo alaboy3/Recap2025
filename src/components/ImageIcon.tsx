@@ -5,6 +5,7 @@ import { ImageItem } from '../types';
 import { ContextMenu } from './ContextMenu';
 import { EditableLabel } from './EditableLabel';
 import { HEICImage } from './HEICImage';
+import { getAssetPath } from '../utils/assetPath';
 import './ImageIcon.css';
 
 interface ImageIconProps {
@@ -106,7 +107,7 @@ export const ImageIcon: React.FC<ImageIconProps> = ({ image, onPositionChange, o
             imageStack: image.imageStack,
           });
         };
-        img.src = firstImageSrc;
+        img.src = getAssetPath(firstImageSrc);
       }
       return;
     }
@@ -158,7 +159,7 @@ export const ImageIcon: React.FC<ImageIconProps> = ({ image, onPositionChange, o
         imageSrc: image.src,
       });
     };
-    img.src = image.src;
+    img.src = getAssetPath(image.src);
   };
 
   const handleContextMenu = (e: React.MouseEvent) => {

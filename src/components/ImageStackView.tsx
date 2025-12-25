@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
 import { HEICImage } from './HEICImage';
+import { getAssetPath } from '../utils/assetPath';
 import './ImageStackView.css';
 
 interface ImageStackViewProps {
@@ -295,7 +296,7 @@ export const ImageStackView: React.FC<ImageStackViewProps> = ({ images, initialI
                   });
                 }
               }}
-              src={getVideoSrc(currentMedia)}
+              src={getAssetPath(getVideoSrc(currentMedia))}
               className="image-stack-video"
               controls
               autoPlay
@@ -303,11 +304,11 @@ export const ImageStackView: React.FC<ImageStackViewProps> = ({ images, initialI
               onError={(e) => {
                 // Try alternative path if video fails to load
                 const video = e.currentTarget;
-                const altSrc = currentMedia.startsWith('/images/') 
+                const altSrc = currentMedia.startsWith('/images/')
                   ? `/videos/${currentMedia.split('/').pop()}`
                   : `/images/${currentMedia}`;
                 if (video.src !== altSrc) {
-                  video.src = altSrc;
+                  video.src = getAssetPath(altSrc);
                 }
               }}
             />

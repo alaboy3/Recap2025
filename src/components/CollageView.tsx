@@ -1,6 +1,7 @@
 import React from 'react';
 import { HEICImage } from './HEICImage';
 import { useApp } from '../context/AppContext';
+import { getAssetPath } from '../utils/assetPath';
 import './CollageView.css';
 
 interface CollageViewProps {
@@ -97,12 +98,12 @@ export const CollageView: React.FC<CollageViewProps> = ({ items }) => {
                 />
               ) : (
                 <div className="collage-video">
-                  <video 
-                    src={src} 
-                    className="collage-video-element" 
-                    autoPlay 
-                    muted 
-                    loop 
+                  <video
+                    src={getAssetPath(src)}
+                    className="collage-video-element"
+                    autoPlay
+                    muted
+                    loop
                     playsInline
                   />
                 </div>

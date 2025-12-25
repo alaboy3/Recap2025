@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HEICImage } from './HEICImage';
 import heic2any from 'heic2any';
+import { getAssetPath } from '../utils/assetPath';
 import './CalendarWindow.css';
 
 interface CalendarWindowProps {
@@ -84,7 +85,7 @@ export const CalendarWindow: React.FC<CalendarWindowProps> = () => {
         
         if (isHEIC) {
           try {
-            const response = await fetch(src);
+            const response = await fetch(getAssetPath(src));
             const blob = await response.blob();
             const result = await heic2any({
               blob,
@@ -103,7 +104,7 @@ export const CalendarWindow: React.FC<CalendarWindowProps> = () => {
             const img = new Image();
             img.onload = () => resolve();
             img.onerror = () => resolve();
-            img.src = src;
+            img.src = getAssetPath(src);
           });
         }
       };

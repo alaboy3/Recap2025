@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import heic2any from 'heic2any';
+import { getAssetPath } from '../utils/assetPath';
 
 interface HEICImageProps {
   src: string;
@@ -27,10 +28,10 @@ export const HEICImage: React.FC<HEICImageProps> = ({
     setIsLoading(true);
     setError(false);
     setImageSrc(''); // Clear previous image
-    
+
     // Check if the image is HEIC format (case-insensitive)
     const isHEIC = src.toLowerCase().endsWith('.heic') || src.toLowerCase().endsWith('.heif');
-    
+
     // Validate src is not empty
     if (!src || src.trim() === '') {
       console.error('HEICImage: Empty src provided');
@@ -39,7 +40,10 @@ export const HEICImage: React.FC<HEICImageProps> = ({
       if (onError) onError();
       return;
     }
-    
+
+    // Get the full asset path with base URL
+    const fullPath = getAssetPath(src);
+
     if (isHEIC) {
       // Check global cache first (if available from CalendarWindow)
       const globalCache = (window as any).__heicImageCache__;
@@ -51,9 +55,9 @@ export const HEICImage: React.FC<HEICImageProps> = ({
         if (onLoad) onLoad();
         return;
       }
-      
+
       // Fetch the HEIC file
-      fetch(src)
+      fetch(fullPath)
         .then((response) => {
           if (!response.ok) {
             throw new Error(`Failed to fetch image: ${response.status} ${response.statusText}`);
@@ -125,8 +129,8 @@ export const HEICImage: React.FC<HEICImageProps> = ({
           if (onError) onError();
         });
     } else {
-      // Not HEIC, use the image directly
-      setImageSrc(src);
+      // Not HEIC, use the image directly with full path
+      setImageSrc(fullPath);
       setIsLoading(false);
       if (onLoad) onLoad();
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { HEICImage } from './HEICImage';
+import { getAssetPath } from '../utils/assetPath';
 import './MediaGrid.css';
 
 interface MediaGridProps {
@@ -53,7 +54,7 @@ export const MediaGrid: React.FC<MediaGridProps> = ({ items }) => {
               <HEICImage src={src} alt={item} className="media-thumbnail" />
             ) : (
               <div className="media-thumbnail video-thumbnail">
-                <video src={src} className="media-preview" />
+                <video src={getAssetPath(src)} className="media-preview" />
                 <div className="video-play-icon">▶</div>
               </div>
             )}

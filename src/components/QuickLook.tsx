@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { HEICImage } from './HEICImage';
+import { getAssetPath } from '../utils/assetPath';
 import './QuickLook.css';
 
 export const QuickLook: React.FC = () => {
@@ -35,7 +36,7 @@ export const QuickLook: React.FC = () => {
           <HEICImage src={quickLook.mediaSrc} alt="Preview" className="quicklook-media" />
         ) : (
           <video
-            src={quickLook.mediaSrc}
+            src={getAssetPath(quickLook.mediaSrc)}
             controls
             autoPlay
             className="quicklook-media"

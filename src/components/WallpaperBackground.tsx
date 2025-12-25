@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import heic2any from 'heic2any';
+import { getAssetPath } from '../utils/assetPath';
 import './WallpaperBackground.css';
 
 interface WallpaperBackgroundProps {
@@ -14,11 +15,12 @@ export const WallpaperBackground: React.FC<WallpaperBackgroundProps> = ({ src, c
   useEffect(() => {
     let blobUrl: string | null = null;
     const isHEIC = src.toLowerCase().endsWith('.heic') || src.toLowerCase().endsWith('.heif');
-    
+    const fullPath = getAssetPath(src);
+
     if (isHEIC) {
       setIsLoading(true);
-      
-      fetch(src)
+
+      fetch(fullPath)
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -57,8 +59,8 @@ export const WallpaperBackground: React.FC<WallpaperBackgroundProps> = ({ src, c
           setIsLoading(false);
         });
     } else {
-      // Not HEIC, use directly
-      setBackgroundImage(`url(${src})`);
+      // Not HEIC, use directly with full path
+      setBackgroundImage(`url(${fullPath})`);
       setIsLoading(false);
     }
 
