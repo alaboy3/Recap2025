@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "optimize-images": "node optimize-images.js",
+    "build:prod": "npm run optimize-images && npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "watch-concerts": "node watch-concerts-folder.js"
