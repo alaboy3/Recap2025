@@ -10,7 +10,6 @@ interface WallpaperBackgroundProps {
 export const WallpaperBackground: React.FC<WallpaperBackgroundProps> = ({ src, className }) => {
   const [backgroundImage, setBackgroundImage] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
 
   useEffect(() => {
     let blobUrl: string | null = null;
@@ -18,7 +17,6 @@ export const WallpaperBackground: React.FC<WallpaperBackgroundProps> = ({ src, c
     
     if (isHEIC) {
       setIsLoading(true);
-      setError(false);
       
       fetch(src)
         .then((response) => {
@@ -50,7 +48,6 @@ export const WallpaperBackground: React.FC<WallpaperBackgroundProps> = ({ src, c
             blobUrl = URL.createObjectURL(result);
             setBackgroundImage(`url(${blobUrl})`);
             setIsLoading(false);
-            setError(false);
           } else {
             throw new Error('Conversion returned no result');
           }
@@ -58,13 +55,11 @@ export const WallpaperBackground: React.FC<WallpaperBackgroundProps> = ({ src, c
         .catch((err) => {
           console.error('Wallpaper conversion error:', err);
           setIsLoading(false);
-          setError(true);
         });
     } else {
       // Not HEIC, use directly
       setBackgroundImage(`url(${src})`);
       setIsLoading(false);
-      setError(false);
     }
 
     // Cleanup function
