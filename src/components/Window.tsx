@@ -9,25 +9,25 @@ interface WindowProps {
   window: WindowType;
 }
 
-export const Window: React.FC<WindowProps> = ({ window }) => {
+export const Window: React.FC<WindowProps> = ({ window: windowData }) => {
   const { closeWindow, bringToFront, updateWindowPosition, updateWindowSize } = useApp();
   const [isResizing, setIsResizing] = useState(false);
   const resizeStartPos = useRef({ x: 0, y: 0 });
   const resizeStartSize = useRef({ width: 0, height: 0 });
   const { position, handleMouseDown: handleTitleBarMouseDown } = useDrag(
-    window.position,
+    windowData.position,
     (newPos) => {
-      updateWindowPosition(window.id, newPos);
-      bringToFront(window.id);
+      updateWindowPosition(windowData.id, newPos);
+      bringToFront(windowData.id);
     }
   );
 
   useEffect(() => {
-    bringToFront(window.id);
+    bringToFront(windowData.id);
   }, []);
 
   const handleTitleBarClick = () => {
-    bringToFront(window.id);
+    bringToFront(windowData.id);
   };
 
   const handleResizeMouseDown = (e: React.MouseEvent) => {
