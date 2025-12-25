@@ -35,7 +35,7 @@ export const Window: React.FC<WindowProps> = ({ window: windowData }) => {
     e.stopPropagation();
     setIsResizing(true);
     resizeStartPos.current = { x: e.clientX, y: e.clientY };
-    resizeStartSize.current = window.size;
+    resizeStartSize.current = windowData.size;
   };
 
   useEffect(() => {
@@ -50,15 +50,15 @@ export const Window: React.FC<WindowProps> = ({ window: windowData }) => {
       const viewportHeight = typeof window !== 'undefined' ? window.innerHeight : 1080;
       const minWidth = 300;
       const minHeight = 200;
-      const maxWidth = viewportWidth - window.position.x;
-      const maxHeight = viewportHeight - window.position.y;
+      const maxWidth = viewportWidth - windowData.position.x;
+      const maxHeight = viewportHeight - windowData.position.y;
 
       const newSize = {
         width: Math.max(minWidth, Math.min(maxWidth, resizeStartSize.current.width + deltaX)),
         height: Math.max(minHeight, Math.min(maxHeight, resizeStartSize.current.height + deltaY)),
       };
 
-      updateWindowSize(window.id, newSize);
+      updateWindowSize(windowData.id, newSize);
     };
 
     const handleMouseUp = () => {
@@ -76,7 +76,7 @@ export const Window: React.FC<WindowProps> = ({ window: windowData }) => {
         window.removeEventListener('mouseup', handleMouseUp);
       }
     };
-  }, [isResizing, window.id, updateWindowSize]);
+  }, [isResizing, windowData.id, updateWindowSize]);
 
   return (
     <div
@@ -84,9 +84,9 @@ export const Window: React.FC<WindowProps> = ({ window: windowData }) => {
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
-        width: `${window.size.width}px`,
-        height: `${window.size.height}px`,
-        zIndex: window.zIndex,
+        width: `${windowData.size.width}px`,
+        height: `${windowData.size.height}px`,
+        zIndex: windowData.zIndex,
       }}
       onClick={handleTitleBarClick}
     >
@@ -99,23 +99,23 @@ export const Window: React.FC<WindowProps> = ({ window: windowData }) => {
             className="window-control window-control-close"
             onClick={(e) => {
               e.stopPropagation();
-              closeWindow(window.id);
+              closeWindow(windowData.id);
             }}
           />
           <button className="window-control window-control-minimize" />
           <button className="window-control window-control-maximize" />
         </div>
-        <div className="window-title">{window.title}</div>
+        <div className="window-title">{windowData.title}</div>
       </div>
       <div className="window-content">
         <WindowContent
-          type={window.type}
-          items={window.items}
-          imageSrc={window.imageSrc}
-          imageStack={window.imageStack}
-          backgroundImage={window.backgroundImage}
-          windowId={window.id}
-          folderContents={window.folderContents}
+          type={windowData.type}
+          items={windowData.items}
+          imageSrc={windowData.imageSrc}
+          imageStack={windowData.imageStack}
+          backgroundImage={windowData.backgroundImage}
+          windowId={windowData.id}
+          folderContents={windowData.folderContents}
         />
       </div>
       <div
