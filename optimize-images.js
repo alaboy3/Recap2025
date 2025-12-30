@@ -38,6 +38,7 @@ async function optimizeImage(imagePath) {
       console.log(`Converting ${path.relative(PUBLIC_DIR, imagePath)} to JPG...`);
 
       await sharp(imagePath)
+        .rotate() // Automatically apply EXIF orientation
         .resize(MAX_WIDTH, null, { withoutEnlargement: true, fit: 'inside' })
         .jpeg({ quality: QUALITY })
         .toFile(outputPath);
@@ -57,6 +58,7 @@ async function optimizeImage(imagePath) {
 
       const tempPath = imagePath + '.tmp';
       await sharp(imagePath)
+        .rotate() // Automatically apply EXIF orientation
         .resize(MAX_WIDTH, null, { withoutEnlargement: true, fit: 'inside' })
         .jpeg({ quality: QUALITY })
         .toFile(tempPath);
